@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+public struct ItemType
+{
+    public string iName;
+}
+
 public class ItemBuilder : EditorWindow
 {
     string name;
-    Sprite j;    //ItemType itemType;
-    [MenuItem("Window/ItemBuilder")]
+    Sprite j;
+    ItemType itemType;
+    [MenuItem("Window/AIconomy/ItemBuilder")]
     
     public static void ShowWindow()
     {
-        EditorWindow.GetWindow(typeof(ItemBuilder));
+        GetWindow<ItemBuilder>(false, "Item Builder", true);
     }
 
     void Update()
@@ -19,7 +25,7 @@ public class ItemBuilder : EditorWindow
 
     }
 
-    private void onGUI()
+    void OnGUI()
     {
         name = EditorGUILayout.TextField("Name of Item", name);
         j = EditorGUILayout.ObjectField("Item Sprite", j, typeof(Sprite), true) as Sprite;
