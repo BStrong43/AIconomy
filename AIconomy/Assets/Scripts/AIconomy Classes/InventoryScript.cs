@@ -6,6 +6,7 @@ public class InventoryScript : MonoBehaviour
 {
     public int walletAmount;
     public List<GameObject> items = new List<GameObject>();
+    //public FactionTypes.faction alliedFaction;
 
     public int getWalletAmount()
     {
