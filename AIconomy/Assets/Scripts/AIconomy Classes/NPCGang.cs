@@ -8,10 +8,12 @@ public class NPCGang : MonoBehaviour
     public ItemScript.itemType desiredType;
     public ItemScript.itemType dislikedType;
 
-    /*public int getGang()
+    /*
+    public int getGang()
     {
         return (int)gang;
-    }*/
+    }
+    */
 
     public int getDesiredType()
     {

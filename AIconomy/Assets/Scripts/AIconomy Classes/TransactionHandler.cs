@@ -23,6 +23,7 @@ public class TransactionHandler : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         playerUI = new List<GameObject>();
         otherUI = new List<GameObject>();
         tradeButton.SetActive(false);
@@ -112,6 +113,7 @@ public class TransactionHandler : MonoBehaviour
         List<int> playerTrades = new List<int>();
         List<int> otherTrades = new List<int>();
         int pTotal = 0, oTotal = 0;
+       
         //Swap item indexes
         for(int i=0;i<playerUI.Count; i++)
         {
@@ -130,6 +132,7 @@ public class TransactionHandler : MonoBehaviour
                 oTotal += otherUI[i].GetComponent<ItemUIScript>().value;
             }
         }
+
         if(pTotal >= (oTotal - acceptedValueDifference))
         {
             //Make Swap
@@ -144,10 +147,12 @@ public class TransactionHandler : MonoBehaviour
             {
                 otherInv.Add(playerInv[playerTrades[i]]);
             }
+
             for (int i = 0; i < otherTrades.Count; i++)
             {
                 playerInv.Add(otherInv[otherTrades[i]]);
             }
+
             //Remove from inventories
             for (int i = playerTrades.Count; i > 0; i--)
             {
