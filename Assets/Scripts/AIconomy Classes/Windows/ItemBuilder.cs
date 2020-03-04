@@ -10,6 +10,7 @@ public struct ItemType
 
 public class ItemBuilder : EditorWindow
 {
+    GameObject item;
     string itemName;
     Sprite j;
     ItemType itemType;
@@ -27,10 +28,12 @@ public class ItemBuilder : EditorWindow
         //itemType = EditorGUI.DropDownMenu(listOfItemTypes);
         if (GUILayout.Button("Build Item"))
         {
-            if(name != null && j != null /*&& itemType != null*/)
+            if (name != null && j != null /*&& itemType != null*/)
             {
-                //build item
+                item = new GameObject();
+
             }
+            else Debug.Log("Item could not be built. Input field null");
             
         }
     }

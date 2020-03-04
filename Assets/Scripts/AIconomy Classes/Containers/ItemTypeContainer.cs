@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemTypeContainer : MonoBehaviour
 {
     [SerializeField]
-    ItemType[] itemTypes
+    ItemType[] itemTypes;
 
     public int foo;
 
@@ -14,14 +14,14 @@ public class ItemTypeContainer : MonoBehaviour
         if(itemTypes == null)
         {
             Debug.Log("itemTypes is null");
-            itemTypes = new List<ItemType>();
+            //itemTypes = new List<ItemType>();
         }
 
         Debug.Log("Item Added: " + name);
         ItemType item;
         foo++;
         item.iName = name;
-        itemTypes.Add(item);
+        //itemTypes.Add(item);
     }
 
     private void Start()

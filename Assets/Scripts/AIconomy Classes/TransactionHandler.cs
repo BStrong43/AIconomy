@@ -23,7 +23,7 @@ public class TransactionHandler : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
         playerUI = new List<GameObject>();
         otherUI = new List<GameObject>();
         tradeButton.SetActive(false);
@@ -184,7 +184,7 @@ public class TransactionHandler : MonoBehaviour
         tradeButton.SetActive(false);
         exitButton.SetActive(false);
         //Set player movement active
-        player.GetComponent<PlayerMovement>().inTrade = false;
+        //player.GetComponent<PlayerMovement>().inTrade = false;
 
         //Return new inventories back to respective holders
         player.GetComponent<InventoryScript>().returnInv(playerInv);
