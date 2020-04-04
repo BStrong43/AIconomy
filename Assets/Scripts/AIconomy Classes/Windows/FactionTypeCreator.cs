@@ -7,7 +7,7 @@ public class FactionTypeCreator : EditorWindow
 {
     
 
-    [MenuItem("Window/AIconomy/FactionTypeCreator")]
+    [MenuItem("Window/AIconomy/FactionTypeCreator[DEPRACATED]")]
     public static void ShowWindow()
     {
         GetWindow<FactionTypeCreator>(false, "Faction Type Creator", true);

@@ -399,8 +399,8 @@ MonoBehaviour:
   inDebug: 0
   player: {fileID: 0}
   cp: {fileID: 0}
-  tradeButton: {fileID: 0}
-  exitButton: {fileID: 0}
+  tradeButton: {fileID: 1970570289641060016}
+  exitButton: {fileID: 7958896126558759102}
   itemUI: {fileID: 1728919112505252065, guid: 6a6f85c4cfea3c447a28023a21f0ccf9, type: 3}
   vertItemSpacing: {x: 0, y: 0, z: 0}
   horizItemSpacing: {x: 0, y: 0, z: 0}
