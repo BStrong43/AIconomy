@@ -165,7 +165,6 @@ public class TransactionHandler : MonoBehaviour
         }
         else
         {
-            //Tell player to fuck off i dont trust like that
             if(inDebug)
                 Debug.Log(this.name + " | More value is required to make this trade");
         }

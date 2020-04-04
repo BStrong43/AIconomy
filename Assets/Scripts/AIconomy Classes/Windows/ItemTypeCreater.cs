@@ -7,13 +7,11 @@ public class ItemTypeCreater : EditorWindow
 {
     string Iname = "";
 
-    [MenuItem("Window/AIconomy/ItemTypeCreator")]
+    [MenuItem("Window/AIconomy/ItemTypeCreator[DEPRACATED]")]
     public static void ShowWindow()
     {
         GetWindow<ItemTypeCreater>(false, "Item Type Creator", true);
     }
-
-
 
     ItemTypeContainer checkObjExist()
     {

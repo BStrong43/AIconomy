@@ -11,9 +11,10 @@ public struct ItemType
 public class ItemBuilder : EditorWindow
 {
     GameObject item;
-    string itemName;
+    string itemName, desc;
     Sprite j;
-    ItemType itemType;
+    int value;
+    ItemScript.itemType itemType;
     [MenuItem("Window/AIconomy/ItemBuilder")]
     
     public static void ShowWindow()
@@ -25,13 +26,17 @@ public class ItemBuilder : EditorWindow
     {
         itemName = EditorGUILayout.TextField("Name of Item", itemName);
         j = EditorGUILayout.ObjectField("Item Sprite", j, typeof(Sprite), true) as Sprite;
+        value = (int)EditorGUILayout.IntField(value);
         //itemType = EditorGUI.DropDownMenu(listOfItemTypes);
         if (GUILayout.Button("Build Item"))
         {
-            if (name != null && j != null /*&& itemType != null*/)
+            if (itemName != null && j != null && desc != null)
             {
                 item = new GameObject();
-
+                item.AddComponent<ItemScript>();
+                item.GetComponent<ItemScript>().baseValue = value;
+                item.GetComponent<ItemScript>().icon = j;
+                item.name = itemName;
             }
             else Debug.Log("Item could not be built. Input field null");
             
