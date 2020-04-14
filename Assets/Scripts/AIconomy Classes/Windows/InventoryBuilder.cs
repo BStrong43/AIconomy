@@ -19,12 +19,12 @@ public class InventoryBuilder : EditorWindow
     // Update is called once per frame
     void OnGUI()
     {
+        obj = EditorGUILayout.ObjectField("Recieving Object", obj, typeof(GameObject), true) as GameObject;
+        desiredType = (ItemScript.itemType)EditorGUILayout.EnumPopup("Desired Item Type", desiredType);
+        dislikedType = (ItemScript.itemType)EditorGUILayout.EnumPopup("Disliked Item Type", dislikedType);
+
         if (GUILayout.Button("Assign Inventory"))
         {
-            obj = EditorGUILayout.ObjectField("Recieving Object", obj, typeof(GameObject), true) as GameObject;
-            desiredType = (ItemScript.itemType)EditorGUILayout.EnumPopup("Desired Item Type", desiredType);
-            desiredType = (ItemScript.itemType)EditorGUILayout.EnumPopup("Desired Item Type", desiredType);
-
             if (obj != null)
             {
                 obj.AddComponent<InventoryScript>();

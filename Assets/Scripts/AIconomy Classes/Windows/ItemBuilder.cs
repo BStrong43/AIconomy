@@ -27,15 +27,17 @@ public class ItemBuilder : EditorWindow
         itemName = EditorGUILayout.TextField("Name of Item", itemName);
         j = EditorGUILayout.ObjectField("Item Sprite", j, typeof(Sprite), true) as Sprite;
         value = (int)EditorGUILayout.IntField(value);
-        //itemType = EditorGUI.DropDownMenu(listOfItemTypes);
+        itemType = (ItemScript.itemType)EditorGUILayout.EnumPopup("Type of Item", itemType);
+        desc = EditorGUILayout.TextArea(desc);
         if (GUILayout.Button("Build Item"))
         {
-            if (itemName != null && j != null && desc != null)
+            if (itemName != null && j != null)
             {
                 item = new GameObject();
                 item.AddComponent<ItemScript>();
                 item.GetComponent<ItemScript>().baseValue = value;
                 item.GetComponent<ItemScript>().icon = j;
+                item.GetComponent<ItemScript>().itemDesc = desc;
                 item.name = itemName;
             }
             else Debug.Log("Item could not be built. Input field null");
