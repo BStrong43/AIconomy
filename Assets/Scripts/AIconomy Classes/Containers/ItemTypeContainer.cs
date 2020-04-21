@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemTypeContainer : MonoBehaviour
 {
     [SerializeField]
-    ItemType[] itemTypes;
+    ItemType[] itemTypes = null;
 
     public int foo;
 
