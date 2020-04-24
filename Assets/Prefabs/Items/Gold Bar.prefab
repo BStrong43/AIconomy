@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseValue: 20
   icon: {fileID: 0}
-  type: 2
-  itemDesc: 
+  type: 8
+  itemDesc: A bar of Gold

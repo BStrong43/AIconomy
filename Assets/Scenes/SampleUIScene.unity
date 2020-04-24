@@ -367,7 +367,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walletAmount: 0
-  items: []
+  items:
+  - {fileID: 117625884595587399, guid: 74d062c6136e6b7468aa9de7eb66dfff, type: 3}
+  - {fileID: 5651901591127418702, guid: e03d47c5cbf134e4d8e5c8acd68c68e3, type: 3}
+  - {fileID: 2547237525840232980, guid: 70721a17592574d408290549071bda47, type: 3}
+  - {fileID: 2540332270984222593, guid: 75973967b5dce54468660ebcc21c160b, type: 3}
   desired: 4
   disliked: 6
 --- !u!1 &963194225
@@ -652,6 +656,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walletAmount: 0
   items:
-  - {fileID: 0}
+  - {fileID: 1765347049078283831, guid: 5dd82c8f930b9f54fa30bd488726053f, type: 3}
+  - {fileID: 913230800044066245, guid: 19ef18eb24873d14b997ff96dcf53efb, type: 3}
+  - {fileID: 2540332270984222593, guid: 75973967b5dce54468660ebcc21c160b, type: 3}
+  - {fileID: 1765347049078283831, guid: 5dd82c8f930b9f54fa30bd488726053f, type: 3}
   desired: 2
   disliked: 8

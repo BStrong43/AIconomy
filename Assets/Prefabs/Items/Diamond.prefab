@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseValue: 2000
   icon: {fileID: 21300000, guid: 0b2cca9489a1e204495c4914709568ec, type: 3}
-  type: 0
+  type: 8
   itemDesc: DIamond. SHiny

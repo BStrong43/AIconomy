@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseValue: 4
   icon: {fileID: 0}
-  type: 1
-  itemDesc: 
+  type: 4
+  itemDesc: You cannot afford my diamond sword

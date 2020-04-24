@@ -5,7 +5,7 @@ using UnityEngine;
 public class InvisibleHand : MonoBehaviour
 {
     [Range(1, 10)]
-    [Tooltip("Number of trades each inventory will do when trading")]
+    [Tooltip("Number of trades each inventory will perform when trading")]
     public int numTrades = 1;
 
     InventoryScript[] inventories;
@@ -13,6 +13,14 @@ public class InvisibleHand : MonoBehaviour
     void Start()
     {
         acceptedValueDifference = Object.FindObjectOfType<TransactionHandler>().acceptedValueDifference;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            doTrade();
+        }    
     }
 
     //This is a very expensive call
@@ -26,9 +34,9 @@ public class InvisibleHand : MonoBehaviour
             for(int j = 0; j < numTrades; j++)
             {
                 //Index of item up for trade by inventory
-                int itemForTrade = getRandomIndex(i.items.Count);
+                int itemForTrade = getRandomIndex(i.items.Count - 1);
                 //index of the other inventory
-                int otherInv = getRandomIndex(inventories.Length);
+                int otherInv = getRandomIndex(inventories.Length - 1);
                 //Value of item up for trade based on this inventory's desired/disliked
                 int tradeVal = i.items[itemForTrade].GetComponent<ItemScript>().baseValue +
                     getPriceChange(i, i.items[itemForTrade].GetComponent<ItemScript>().getItemType());

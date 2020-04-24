@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseValue: 15
   icon: {fileID: 0}
-  type: 2
-  itemDesc: 
+  type: 8
+  itemDesc: Expensive silver
